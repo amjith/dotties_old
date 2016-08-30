@@ -1,60 +1,6 @@
 set nocompatible
 filetype off
 
- set rtp+=~/.vim/bundle/Vundle.vim
- call vundle#begin()
-
-" let Vundle manage Vundle
-" required! 
-Plugin 'gmarik/Vundle.vim'
-
-" Bundle List - Original Repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rsi'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'sjl/gundo.vim'
-Plugin 'amjith/rtf-highlight'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'rking/ag.vim'
-Plugin 'tomasr/molokai'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'fatih/vim-go'
-Plugin 'SirVer/ultisnips'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'jiangmiao/auto-pairs'
-"Plugin 'Yggdroot/indentLine'
-Plugin 'ElmCast/elm-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'alvan/vim-closetag'
-Plugin 'godlygeek/tabular'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'vim-airline/vim-airline'
-
-" Vim-script Repo
-Plugin 'L9'
-"Plugin 'AutoComplPop'
-"Plugin 'Auto-Pairs'
-Plugin 'matchit.zip'
-Plugin 'vimwiki'
-Plugin 'EasyGrep'
-Plugin 'VisIncr'
-
-" Colors
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'sjl/badwolf'
-
-" All of the Plugins must be added before the following line
-call vundle#end()
-
 set background=light
 "if has("gui_running")
     "colorscheme solarized

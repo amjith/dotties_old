@@ -14,7 +14,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -195,9 +194,6 @@ set pastetoggle=<F2>
 " E701 - multiple statmenets on one line (colon)
 let g:pymode_lint_ignore = "E501,E302,E701,E128,E126"
 let g:pymode_lint_cwindow = 1
-
-" NERDTree Toggle.
-map <leader>n :NERDTreeToggle<CR>
 
 set t_Co=256 " Explicitly tell vim to support 256 colors
 

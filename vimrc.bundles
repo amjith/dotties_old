@@ -1,0 +1,48 @@
+" let Vundle manage Vundle
+" required! 
+Plug 'gmarik/Vundle.vim'
+
+" Bundle List - Original Repo
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'majutsushi/tagbar'
+Plug 'sjl/gundo.vim'
+Plug 'amjith/rtf-highlight'
+Plug 'airblade/vim-gitgutter'
+Plug 'rking/ag.vim'
+Plug 'tomasr/molokai'
+Plug 'Valloric/YouCompleteMe'
+Plug 'fatih/vim-go'
+Plug 'SirVer/ultisnips'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'Yggdroot/indentLine'
+Plug 'ElmCast/elm-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'alvan/vim-closetag'
+Plug 'godlygeek/tabular'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'vim-airline/vim-airline'
+
+" Vim-script Repo
+Plug 'L9'
+"Plug 'AutoComplPop'
+"Plug 'Auto-Pairs'
+Plug 'matchit.zip'
+Plug 'vimwiki'
+Plug 'EasyGrep'
+Plug 'VisIncr'
+
+" Colors
+Plug 'altercation/vim-colors-solarized'
+Plug 'sjl/badwolf'

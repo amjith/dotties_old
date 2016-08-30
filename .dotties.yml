@@ -1,0 +1,4 @@
+packages:
+  - tinytacoteam/dotties-vim-movements
+  - tinytacoteam/dotties-tmux-movements
+  - tinytacoteam/dotties-vim

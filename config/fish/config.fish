@@ -12,3 +12,10 @@ set -g VIRTUALFISH_COMPAT_ALIASES
 
 # Alias
 alias l='ls -lah'
+
+# Sauce lab creds
+set -g -x JIL_SAUCE_LABS_USERNAME bam_dev
+set -g -x JIL_SAUCE_LABS_ACCESS_KEY 291fc8ed-7260-4d82-bc4c-fb2cb139f673
+
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

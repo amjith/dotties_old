@@ -1,7 +1,3 @@
-" let Vundle manage Vundle
-" required! 
-Plug 'gmarik/Vundle.vim'
-
 " Bundle List - Original Repo
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'

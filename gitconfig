@@ -1,31 +1,31 @@
 [user]
-	name = Amjith Ramanujam
-	email = amjith.r@gmail.com
+  name = Amjith Ramanujam
+  email = amjith.r@gmail.com
 
 [alias]
-        br = branch
-        co = checkout
-        ci = commit -v
-        st = status
-        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  br = branch
+  co = checkout
+  ci = commit -v
+  st = status
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
 [core]
-	editor = /usr/local/bin/mvim -v
-	excludesfile = /Users/amjith/.gitignore
+  editor = /usr/local/bin/mvim -v
+  excludesfile = /Users/amjith/.gitignore
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [github]
-	user = amjith
+  user = amjith
 [rerere]
-	enabled = true
+  enabled = true
 [diff]
-	tool = diffmerge
+  tool = diffmerge
 [difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = diffmerge
+  tool = diffmerge
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+  cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+  trustExitCode = true
 [hub]
-	host = source.datanerd.us
+  host = source.datanerd.us

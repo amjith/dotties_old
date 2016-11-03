@@ -26,6 +26,7 @@ Plug 'godlygeek/tabular'
 Plug 'gorodinskiy/vim-coloresque'    " Shows hex colors in vim.
 Plug 'vim-airline/vim-airline'
 Plug 'maralla/completor.vim'
+Plug 'wincent/ferret'
 
 " Vim-script Repo
 Plug 'L9'

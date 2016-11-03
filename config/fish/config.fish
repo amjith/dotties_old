@@ -1,4 +1,4 @@
-set -g -x PATH $HOME/bin $PATH
+set -g -x PATH $HOME/.bin $PATH
 set -g -x TERM screen-256color
 
 # Autojump settings

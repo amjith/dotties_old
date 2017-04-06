@@ -5,8 +5,8 @@ set background=light
 "if has("gui_running")
     "colorscheme solarized
 "else
-"colorscheme badwolf
-colorscheme solarized
+colorscheme badwolf
+"colorscheme solarized
 "endif
 
 if has("syntax")
@@ -105,7 +105,27 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 set tm=500
 
 " Vimwiki home
-let g:vimwiki_list = [{'path': '~/Dropbox/notes/'}]
+"let g:vimwiki_list = [{'path': '~/Dropbox/notes/'}]
+
+let g:vimwiki_list = [{
+          \ 'path': '~/Dropbox/vimwiki/notes/',
+          \ 'template_path': '~/Dropbox/vimwiki/templates/',
+          \ 'nested_syntaxes': {
+          \   'ruby': 'ruby',
+          \   'python': 'python',
+          \   'javascript': 'javascript',
+          \   'bash': 'sh'
+          \  },
+          \ 'template_default': 'default',
+          \ 'syntax': 'markdown',
+          \ 'ext': '.md',
+          \ 'path_html': '~/Dropbox/vimwiki/site_html/',
+          \ 'custom_wiki2html': 'vimwiki_markdown',
+          \ 'template_ext': '.tpl'
+          \ }]
+
+autocmd FileType vimwiki set spell spelllang=en_us
+
 
 set wildmenu
 
@@ -252,3 +272,6 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 
 " Limit syntax highlighting to lines under 200 chars.
 set synmaxcol=200
+
+" Resize windows when you resize vim
+autocmd VimResized * :wincmd =

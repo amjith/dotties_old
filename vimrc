@@ -275,3 +275,5 @@ set synmaxcol=200
 
 " Resize windows when you resize vim
 autocmd VimResized * :wincmd =
+
+let g:python_host_prog = "/usr/local/bin/python"

@@ -13,7 +13,7 @@
 [push]
   default = current
 [core]
-  editor = /usr/local/bin/mvim -v
+  editor = /usr/local/bin/vim
   excludesfile = /Users/amjith/.gitignore
 [branch]
   autosetuprebase = always

@@ -16,7 +16,6 @@ Plug 'tomasr/molokai'
 Plug 'fatih/vim-go'
 Plug 'SirVer/ultisnips'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'jmcantrell/vim-virtualenv'
 Plug 'ElmCast/elm-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -25,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'gorodinskiy/vim-coloresque'    " Shows hex colors in vim.
 Plug 'vim-airline/vim-airline'
 Plug 'wincent/ferret'
+Plug 'roxma/nvim-completion-manager'
 
 " Vim-script Repo
 Plug 'L9'

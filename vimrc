@@ -55,6 +55,10 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Persist undo history between sessions
+set undofile
+set undodir=~/tmp
+
 set backupdir=~/tmp
 set directory=~/tmp
 if has("autocmd")
@@ -124,10 +128,12 @@ let g:vimwiki_list = [{
           \ 'template_ext': '.tpl'
           \ }]
 
-autocmd FileType vimwiki set spell spelllang=en_us
-
+autocmd FileType vimwiki set spell
 
 set wildmenu
+" Don't show pyc files in wildmenu
+set wildignore+=*.pyc
+
 
 " Leave the statusline visible
 set laststatus=2
@@ -138,6 +144,7 @@ vnoremap p "_dP
 
 "Set colorcolumn to indicate the 80 char violation"
 set colorcolumn=81
+highlight colorcolumn ctermbg=12
 
 " Search for tags file up the directory tree
 set tags=tags;/
@@ -145,10 +152,6 @@ set tags=tags;/
 " F5 to insert current date.
 nnoremap <F5> "=strftime("%y/%m/%d")<CR>P
 inoremap <F5> <C-R>=strftime("%y/%m/%d")<CR>
-
-
-" F2 to toggle paste-mode.
-set pastetoggle=<F2>
 
 " Ignore pylint errors. 
 " E302 - Two blank lines before function definitions.
@@ -158,21 +161,12 @@ let g:pymode_lint_cwindow = 1
 
 set t_Co=256 " Explicitly tell vim to support 256 colors
 
-" Highlight chars greater than 80 chars
-"highlight LongLine ctermbg=green guibg=green
-"match LongLine '\%>80v.\+'
-
-" Disable <CR> for AutoPairs
-let g:AutoPairsMapCR = 0
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown,javascript setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-set wildignore+=*.pyc
 
 " Ctrlp config
 let g:ctrlp_extensions = ['tag']
@@ -197,16 +191,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = []
 "let g:syntastic_javascript_checkers = ['jshint']
-
-" YouCompleteMe config
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_filepath_completion_use_working_dir = 1
-
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " A function that can save the status before executing a command.
 " Useful when removing trailing spaces without losing the last cursor position.
@@ -238,6 +222,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 
 let g:elm_format_autosave = 1
 
@@ -271,9 +257,27 @@ set statusline+=%F
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 
 " Limit syntax highlighting to lines under 200 chars.
-set synmaxcol=200
+set synmaxcol=150
 
 " Resize windows when you resize vim
 autocmd VimResized * :wincmd =
 
+" Always use the global python regardless of virtualenv.
 let g:python_host_prog = "/usr/local/bin/python"
+let g:python3_host_prog = "/usr/local/bin/python3"
+
+" for python completions
+let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
+" language specific completions on markdown file
+let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'mistune')
+
+" utils, optional
+let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'psutil')
+let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'setproctitle')
+
+" completion-manager <tab> key to complete.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+map <leader>gf :e <cfile><cr>

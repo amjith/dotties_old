@@ -124,7 +124,7 @@ let g:vimwiki_list = [{
           \ 'syntax': 'markdown',
           \ 'ext': '.md',
           \ 'path_html': '~/Dropbox/vimwiki/site_html/',
-          \ 'custom_wiki2html': 'vimwiki_markdown',
+          \ 'custom_wiki2html': '~/.bin/wiki2html.sh',
           \ 'template_ext': '.tpl'
           \ }]
 
@@ -143,7 +143,7 @@ nnoremap x "_x
 vnoremap p "_dP
 
 "Set colorcolumn to indicate the 80 char violation"
-set colorcolumn=81
+set colorcolumn=100
 highlight colorcolumn ctermbg=12
 
 " Search for tags file up the directory tree
@@ -152,12 +152,6 @@ set tags=tags;/
 " F5 to insert current date.
 nnoremap <F5> "=strftime("%y/%m/%d")<CR>P
 inoremap <F5> <C-R>=strftime("%y/%m/%d")<CR>
-
-" Ignore pylint errors. 
-" E302 - Two blank lines before function definitions.
-" E701 - multiple statmenets on one line (colon)
-let g:pymode_lint_ignore = "E501,E302,E701,E128,E126"
-let g:pymode_lint_cwindow = 1
 
 set t_Co=256 " Explicitly tell vim to support 256 colors
 
@@ -209,7 +203,7 @@ endfunction
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
-autocmd BufWritePre *.go,*.py,*.js,*.es6,*.elm :call Preserve("%s/\\s\\+$//e")
+autocmd BufWritePre *.go,*.py,*.js,*.es6,*.elm,*.ex,*.exs :call Preserve("%s/\\s\\+$//e")
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
@@ -257,7 +251,7 @@ set statusline+=%F
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 
 " Limit syntax highlighting to lines under 200 chars.
-set synmaxcol=150
+set synmaxcol=350
 
 " Resize windows when you resize vim
 autocmd VimResized * :wincmd =

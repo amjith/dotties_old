@@ -25,18 +25,13 @@ Plug 'gorodinskiy/vim-coloresque'    " Shows hex colors in vim.
 Plug 'vim-airline/vim-airline'
 Plug 'wincent/ferret'
 Plug 'roxma/nvim-completion-manager'
-Plug 'aquach/vim-http-client'
 Plug 'tpope/vim-fugitive'
-Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
 " Vim-script Repo
 Plug 'L9'
 Plug 'matchit.zip'
 Plug 'vimwiki'
 Plug 'EasyGrep'
-Plug 'VisIncr'
 
 " Colors
 Plug 'altercation/vim-colors-solarized'

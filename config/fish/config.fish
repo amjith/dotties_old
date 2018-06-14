@@ -1,4 +1,4 @@
-set -g -x PATH $HOME/.bin $HOME/Library/Python/2.7/bin  /usr/local/bin $PATH /usr/X11/bin 
+set -g -x PATH $HOME/.bin /usr/local/bin $PATH /usr/X11/bin 
 set -g -x TERM screen-256color
 
 set -g -x ERL_AFLAGS "-kernel shell_history enabled"

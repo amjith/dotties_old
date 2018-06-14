@@ -91,9 +91,12 @@ nnoremap cn :cn<CR>
 nnoremap cp :cp<CR>
 
 " Use system clipboard
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
-set nowrap                     			" wrap long lines
+set nowrap
+
+" Highlight the search term for a search/replace
+set inccommand=nosplit
 
 " Set cwd from the path of the file being edited
 set autochdir

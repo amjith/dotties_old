@@ -26,12 +26,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'wincent/ferret'
 Plug 'roxma/nvim-completion-manager'
 Plug 'tpope/vim-fugitive'
+Plug 'vimwiki/vimwiki'
 
 " Vim-script Repo
-Plug 'L9'
-Plug 'matchit.zip'
-Plug 'vimwiki'
-Plug 'EasyGrep'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/EasyGrep'
 
 " Colors
 Plug 'altercation/vim-colors-solarized'

@@ -187,7 +187,7 @@ set splitright
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = []
-"let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint']
 
 " A function that can save the status before executing a command.
 " Useful when removing trailing spaces without losing the last cursor position.
@@ -207,6 +207,8 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
 
 autocmd BufWritePre *.go,*.py,*.js,*.es6,*.elm,*.ex,*.exs :call Preserve("%s/\\s\\+$//e")
+
+"autocmd BufWritePost *.py execute ':Black'
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
@@ -253,15 +255,12 @@ set statusline+=%F
 " Enable automatic close tag for the following file types.
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
 
-" Limit syntax highlighting to lines under 200 chars.
-set synmaxcol=350
-
 " Resize windows when you resize vim
 autocmd VimResized * :wincmd =
 
 " Always use the global python regardless of virtualenv.
-let g:python_host_prog = "/usr/local/bin/python"
-let g:python3_host_prog = "/usr/local/bin/python3"
+let g:python_host_prog = "/usr/bin/python"
+let g:python3_host_prog = "/usr/bin/python3"
 
 " for python completions
 let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')

@@ -1,0 +1,1 @@
+/opt/Enpass/bin/runenpass.sh

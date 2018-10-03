@@ -27,6 +27,8 @@ Plug 'wincent/ferret'
 Plug 'roxma/nvim-completion-manager'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
+Plug 'ambv/black'
+Plug 'mgedmin/coverage-highlight.vim'
 
 " Vim-script Repo
 Plug 'vim-scripts/L9'

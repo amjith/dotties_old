@@ -25,6 +25,7 @@ set -g VIRTUALFISH_COMPAT_ALIASES
 
 # Aliases
 alias l='ls -lah'
+alias vimdiff='nvim -d'
 
 switch (uname)
     case Linux
